@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IntelliDoc QA — Simple RAG</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+      .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+      .row { display: flex; gap: 1rem; align-items: center; }
+      .col { flex: 1; }
+      button { padding: 0.5rem 1rem; cursor: pointer; }
+      code { background: #f5f5f5; padding: 0.2rem 0.4rem; border-radius: 4px; }
+      .sources li { margin-bottom: 0.4rem; }
+    </style>
+  </head>
+  <body>
+    <h1>IntelliDoc QA — Simple RAG</h1>
+
+    <div class="card">
+      <h3>1) Upload documents</h3>
+      <div class="row">
+        <input id="files" type="file" multiple accept=".pdf,.docx,.txt" class="col" />
+        <input id="collection" type="text" placeholder="Collection (auto if empty)" />
+        <button id="btn-upload">Upload</button>
+      </div>
+      <pre id="upload-result"></pre>
+    </div>
+
+    <div class="card">
+      <h3>2) Ask a question</h3>
+      <div class="row">
+        <input id="question" type="text" class="col" placeholder="Ask something..." />
+        <input id="topk" type="number" value="4" min="1" style="width: 64px" />
+        <button id="btn-ask">Ask</button>
+      </div>
+      <h4>Answer</h4>
+      <pre id="answer"></pre>
+      <h4>Sources</h4>
+      <ul id="sources" class="sources"></ul>
+    </div>
+
+    <p>
+      Gradio UI is also available at <a href="/gradio" target="_blank">/gradio</a>.
+    </p>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
