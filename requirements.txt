@@ -13,4 +13,3 @@ prometheus-client==0.21.0
 gradio==4.44.0
 requests==2.32.3
 pydantic==2.9.2
-OLLAMA_MODEL=llama3:latest ./.venv/bin/uvicorn app.main:app --port 8001

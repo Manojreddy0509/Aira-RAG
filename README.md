@@ -1,4 +1,6 @@
-# IntelliDoc QA — Simple RAG
+# Aira-RAG
+
+## Simple RAG Web App
 
 A minimal, local, privacy-preserving RAG web app using FastAPI, LangChain, ChromaDB, and a locally hosted LLM (Ollama). Includes:
 - PDF/DOCX/TXT ingestion
@@ -15,7 +17,7 @@ A minimal, local, privacy-preserving RAG web app using FastAPI, LangChain, Chrom
 - Python 3.11 recommended
 - From project root, install deps:
 
-  pip install -r simple_rag/requirements.txt
+  pip install -r requirements.txt
 
 2) Run a local LLM (Ollama)
 - Install Ollama: https://ollama.com/download
@@ -25,7 +27,7 @@ A minimal, local, privacy-preserving RAG web app using FastAPI, LangChain, Chrom
 
 3) Launch the app
 
-  uvicorn simple_rag.app.main:app --reload --port 8000
+  uvicorn app.main:app --reload --port 8000
 
 Open http://localhost:8000 for the static UI, or http://localhost:8000/gradio for Gradio.
 
