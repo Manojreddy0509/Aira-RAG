@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    image: simple-rag-app:latest
+    container_name: simple-rag-app
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=llama3.1
+      - PREFER_OPENAI=false
+    volumes:
+      - ./chroma_db:/app/simple_rag/chroma_db
+    depends_on:
+      - ollama
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+volumes:
+  ollama_models:
