@@ -7,10 +7,7 @@ A minimal, local, privacy-preserving RAG web app using FastAPI, LangChain, Chrom
 - PDF/DOCX/TXT ingestion
 - Vector embeddings (all-MiniLM-L6-v2) and ChromaDB persistence
 - RAG question answering via Ollama (optional OpenAI fallback)
-- OpenAI-compatible endpoints: /v1/chat/completions and /v1/embeddings
 - Gradio interface mounted at /gradio and a simple static UI at /
-- Prometheus /metrics endpoint for latency and request counters
-- Dockerfile + docker-compose for reproducible deployment
 
 ## Quickstart (local)
 
